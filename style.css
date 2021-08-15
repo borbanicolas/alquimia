@@ -1,10 +1,21 @@
+body{
+    background-image: url(image/bg-2.jpg);
+    background-size: 100% 100vh;
+
+}
+h1{
+    text-align: center;
+    margin-top: 19%;
+    justify-content: center;
+}
+
 body, ul{ 
     margin: 0px;
     padding: 0px;
 }
 
 a{
-    color: black;
+    color: white;
     text-decoration: none;
     font-family: sans-serif;
 }
@@ -24,7 +35,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #e7e7e7;
+    
 }
 #menu{
     display: flex;
@@ -35,4 +46,7 @@ a:hover {
     display: block;
     padding: .5rem;
 }
- 
+#btn-mobile{
+    display: none;
+}
+
