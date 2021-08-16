@@ -3,7 +3,10 @@ body{
     background-size: 100% 100vh;
 
 }
-h1{
+
+#cta{
+    font-size: 40px;
+    color: white;
     text-align: center;
     margin-top: 19%;
     justify-content: center;
@@ -50,3 +53,14 @@ a:hover {
     display: none;
 }
 
+@media (max-width: 800px){
+    #btn-mobile{
+        display: block;
+    }
+    #menu{
+        display: none;
+    }
+    #nav.active #menu{
+        display: flex;
+    }
+}
