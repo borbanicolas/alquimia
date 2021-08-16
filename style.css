@@ -58,9 +58,30 @@ a:hover {
         display: block;
     }
     #menu{
-        display: none;
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background-image: url(image/bg-2.jpg);
+        background-position: left;
+        text-align: center;
+        transition: .6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+        
     }
     #nav.active #menu{
-        display: flex;
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+
+    }
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
     }
 }
