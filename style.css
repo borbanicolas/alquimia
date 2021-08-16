@@ -54,34 +54,69 @@ a:hover {
 }
 
 @media (max-width: 800px){
-    #btn-mobile{
-        display: block;
-    }
-    #menu{
-        display: block;
-        position: absolute;
-        width: 100%;
-        top: 70px;
-        right: 0px;
-        background-image: url(image/bg-2.jpg);
-        background-position: left;
-        text-align: center;
-        transition: .6s;
-        z-index: 1000;
-        height: 0px;
-        visibility: hidden;
-        overflow-y: hidden;
-        
-    }
-    #nav.active #menu{
-        height: calc(100vh - 70px);
-        visibility: visible;
-        overflow-y: auto;
 
+#menu{
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background-image: url(image/bg-2.jpg);
+    background-position: center;
+    text-align: center;
+    transition: .6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+    
+}
+#nav.active #menu{
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+    
+}
+#menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, .05);
+}
+#btn-mobile{
+    color: aliceblue;
+    display: flex;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: .5rem;
     }
-    #menu a {
-        padding: 1rem 0;
-        margin: 0 1rem;
-        border-bottom: 2px solid rgba(0, 0, 0, .05);
+    #hamburger{
+        display: block;
+        border-top: 2px solid;
+        width: 20px;
+    }
+     #hamburger::after, #hamburger::before{
+         content:'';
+         display: block;
+         width: 20px;
+         height: 2px;
+         background: currentColor;
+         margin-top: 5px;
+         transition: .4s;
+         position: relative;
+     }
+     #nav.active #hamburger {
+       border-top-color: transparent;
+
+     }
+     #nav.active #hamburger::before{
+         transform: rotate(135deg);
+
+     }
+     #nav.active #hamburger::after{
+        transform: rotate(-135deg);
+        top: -7px;
     }
 }
